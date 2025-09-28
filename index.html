@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Connect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #ffffff00;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            padding: 8px 16px;
+            display: block;
+            border: 1px solid #ccc;
+            background: #f7f4f8;
+        }
+
+        /* Welcome Section */
+        .welcome {
+            background-color: #e9f0ff;
+            margin: 20px auto;
+            width: 80%;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        /* About Section */
+        .about h2 {
+            background: #f3def6;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-left: 40px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-content img {
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .about-content .text {
+            flex: 1;
+        }
+
+        .about-content .text p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .about-content button {
+            background: #f3def6;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Core Values */
+        .core-values h2 {
+            background: #d7e5fc;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-left: 40px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .values-box {
+            background: #fbeeff;
+            margin: 20px 40px;
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+        }
+
+        .values-box p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .icon {
+            margin-right: 8px;
+        }
+
+        /* Connect Us */
+        .connect h2 {
+            background: #d7e5fc;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-left: 40px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            margin: 20px 40px;
+        }
+
+        .icons a img {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            color: #4a267b;
+        }
+
+        /* Decorative right shape (optional) */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;      /* مساحة الشريط الجانبي */
+  height: 100%;
+  /* صورتين مختلفتين أو نفس الصورة */
+  background-image: 
+    url("imeges/Polygon 18.png"),
+    url("imeges/Polygon 18.png"),
+    url("imeges/Polygon 18.png");
+  /* تكرار كل صورة */
+  background-repeat: repeat-y, repeat-y, repeat-y;
+  /* مكان كل صورة */
+  background-position: right center, right center , right center ;
+  /* حجم كل صورة */
+  background-size: 70px auto, 100px auto , 130px auto;
+  z-index: -1;
+}
+
+
+
+        @media(max-width:768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+        }
+        .values p {
+  font-size: 18px;
+  display: flex;          /* يجعل الصورة والنص في سطر واحد */
+  align-items: center;    /* وسط الصورة مع النص */
+  gap: 8px;               /* مسافة بين الصورة والنص */
+  margin: 8px 0;
+}
+
+.values .icon {
+  width: 24px;  /* حجم الصورة */
+  height: 24px;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="imeges/Image.png" alt="ITC Logo">
+            <h1>College connect</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">E-Server</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">SIGN IN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="welcome">
+        <p>"Welcome to College Connect – Where Students Meet, Share, and Grow!"</p>
+    </section>
+
+    <section class="about">
+        <h2>About US</h2>
+        <div class="about-content">
+            <img src="imeges/Rectangle 1690.png" alt="About">
+            <div class="text">
+                <p>"ITC for Girls – empowering students and sharing college news and services."</p>
+                <button>Read more</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="core-values">
+        <h2>Core Values</h2>
+        <div class="values-box">
+<div class="values">
+  <p>
+    <img src="imeges/light_mode.png" alt="Innovation icon" class="icon">
+    Innovation
+  </p>
+  <p>
+    <img src="imeges/front_hand.png" alt="Collaboration icon" class="icon">
+    Collaboration
+  </p>
+  <p>
+    <img src="imeges/Book.png" alt="Knowledge Sharing icon" class="icon">
+    Knowledge Sharing
+  </p>
+  <p>
+    <img src="imeges/Globe.png" alt="Inclusivity icon" class="icon">
+    Inclusivity
+  </p>
+</div>
+        </div>
+    </section>
+
+    <section class="connect">
+        <h2>Connect Us</h2>
+        <div class="icons">
+            <a href="#"><img src="imeges/eimal.png" alt="Email"></a>
+            <a href="#"><img src="imeges/Rectangle 1689.png" alt="Instagram"></a>
+            <a href="#"><img src="imeges/Group 1564.png" alt="X"></a>
+            <a href="#"><img src="imeges/Phone call.png" alt="Phone"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>International Technical College (Girls Campus)</p>
+    </footer>
+
+    <script>
+        // مثال بسيط للزر "Read more"
+        document.querySelector('.about-content button').addEventListener('click', () => {
+            alert('More information coming soon...');
+        });
+    </script>
+</body>
+
+</html>
