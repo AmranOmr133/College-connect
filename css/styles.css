@@ -40,19 +40,22 @@ header {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;          /* حتى يأخذ المساحة كلها */
 }
 
 .logo img {
-    height: 60px;
+  height: 60px;
+  margin-right: auto;   /* يدفع الصورة لليسار */
 }
 
 .logo h1 {
-    font-size: 1.5rem;
+  flex-grow: 1;         /* يأخذ باقي المساحة */
+  text-align: center;   /* يوسّط النص */
+  font-size: 1.5rem;
 }
+
 
 nav ul {
     list-style: none;
