@@ -268,7 +268,7 @@ style.textContent = `
         height: 50px;
         border: none;
         border-radius: 50%;
-        background: linear-gradient(135deg, #8a2be2, #4a00e0);
+        background: linear-gradient(135deg, #D2A1FFFF, #363043FF);
         color: white;
         font-size: 20px;
         cursor: pointer;
@@ -300,9 +300,9 @@ style.textContent = `
     }
     
     nav ul li a.active {
-        background: linear-gradient(135deg, #8a2be2, #4a00e0);
+        background: linear-gradient(135deg, #D2A1FFFF, #363043FF);
         color: white;
-        border-color: #8a2be2;
+        border-color: #525252FF;
     }
     
     /* Improve existing card hover effects */
