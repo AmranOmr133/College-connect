@@ -14,29 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== تأثير الرأس عند التمرير =====
-    const header = document.querySelector('header');
-    let lastScrollY = window.scrollY;
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            header.style.backdropFilter = 'blur(10px)';
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-            header.style.transition = 'all 0.3s ease';
-        } else {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0)';
-            header.style.boxShadow = 'none';
-        }
-
-        // إخفاء الرأس عند التمرير للأسفل، إظهاره عند التمرير للأعلى
-        if (window.scrollY > lastScrollY && window.scrollY > 200) {
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            header.style.transform = 'translateY(0)';
-        }
-        lastScrollY = window.scrollY;
-    });
 
     // ===== تأثير الكتابة لقسم الترحيب =====
     const welcomeText = document.querySelector('.welcome p');
@@ -66,35 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(welcomeText);
     }
 
-    // ===== تأثير الخلفية المتحركة =====
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        
-        // تأثير الحركة للخلفية
-        document.body.style.backgroundPosition = `right ${scrolled * 0.5}px`;
-    });
 
-    // ===== التحريك عند التمرير =====
-    const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.about-content, .values-box, .card');
-        
-        elements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const elementVisible = 150;
-            
-            if (elementTop < window.innerHeight - elementVisible) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
 
-    // تعيين الحالة الأولية للعناصر المتحركة
-    document.querySelectorAll('.about-content, .values-box, .card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
+
+
 
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // التشغيل مرة واحدة عند التحميل
@@ -181,20 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', highlightNavLink);
 
-    // ===== عداد الرسوم المتحركة للإحصائيات (يمكن إضافتها لاحقاً) =====
-    function animateCounter(element, target, duration) {
-        let start = 0;
-        const increment = target / (duration / 16);
-        const timer = setInterval(() => {
-            start += increment;
-            if (start >= target) {
-                element.textContent = target;
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(start);
-            }
-        }, 16);
-    }
+
 
     // ===== زر العودة إلى الأعلى =====
     const scrollToTopBtn = document.createElement('button');
@@ -276,22 +216,9 @@ style.textContent = `
 
 document.head.appendChild(style);
 
-// ===== شاشة التحميل (اختياري) =====
-window.addEventListener('beforeunload', function() {
-    document.body.classList.add('page-transition');
-});
 
-// ===== اختصارات لوحة المفاتيح =====
-document.addEventListener('keydown', function(e) {
-    // Ctrl + H للذهاب إلى الصفحة الرئيسية
-    if (e.ctrlKey && e.key === 'h') {
-        e.preventDefault();
-        window.location.href = '#';
-    }
+
+
     
-    // مفتاح Escape للعودة إلى الأعلى
-    if (e.key === 'Escape') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-});
+
 
