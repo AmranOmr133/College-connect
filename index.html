@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
     <title>College Connect</title>
     <style>
         * {
@@ -25,7 +28,7 @@
             align-items: center;
             padding: 15px 30px;
             background-color: #ffffff00;
-            border-bottom: 2px solid #ddd;
+            /* border-bottom: 2px solid #ddd; */
         }
 
         .logo {
@@ -142,7 +145,11 @@
         }
 
         /* Connect Us */
-        .connect h2 {
+        .connect {
+            border-top: 3px solid #605f5f;
+        }
+
+        .use {
             background: #d7e5fc;
             display: inline-block;
             padding: 5px 15px;
@@ -150,6 +157,7 @@
             margin-left: 40px;
             margin-top: 30px;
             font-weight: bold;
+            margin-bottom: 40px;
         }
 
         .icons {
@@ -173,26 +181,27 @@
         }
 
         /* Decorative right shape (optional) */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 200px;      /* مساحة الشريط الجانبي */
-  height: 100%;
-  /* صورتين مختلفتين أو نفس الصورة */
-  background-image: 
-    url("imeges/Polygon 18.png"),
-    url("imeges/Polygon 18.png"),
-    url("imeges/Polygon 18.png");
-  /* تكرار كل صورة */
-  background-repeat: repeat-y, repeat-y, repeat-y;
-  /* مكان كل صورة */
-  background-position: right center, right center , right center ;
-  /* حجم كل صورة */
-  background-size: 70px auto, 100px auto , 130px auto;
-  z-index: -1;
-}
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px;
+            /* مساحة الشريط الجانبي */
+            height: 100%;
+            /* صورتين مختلفتين أو نفس الصورة */
+            background-image:
+                url("imeges/Polygon 18.png"),
+                url("imeges/Polygon 18.png"),
+                url("imeges/Polygon 18.png");
+            /* تكرار كل صورة */
+            background-repeat: repeat-y, repeat-y, repeat-y;
+            /* مكان كل صورة */
+            background-position: right center, right center, right center;
+            /* حجم كل صورة */
+            background-size: 70px auto, 100px auto, 130px auto;
+            z-index: -1;
+        }
 
 
 
@@ -206,19 +215,49 @@ body::after {
                 flex-wrap: wrap;
             }
         }
+
         .values p {
-  font-size: 18px;
-  display: flex;          /* يجعل الصورة والنص في سطر واحد */
-  align-items: center;    /* وسط الصورة مع النص */
-  gap: 8px;               /* مسافة بين الصورة والنص */
-  margin: 8px 0;
-}
+            font-size: 18px;
+            display: flex;
+            /* يجعل الصورة والنص في سطر واحد */
+            align-items: center;
+            /* وسط الصورة مع النص */
+            gap: 8px;
+            /* مسافة بين الصورة والنص */
+            margin: 8px 0;
+        }
 
-.values .icon {
-  width: 24px;  /* حجم الصورة */
-  height: 24px;
-}
+        .values .icon {
+            width: 24px;
+            /* حجم الصورة */
+            height: 24px;
+        }
 
+        /* مثال لتنسيق CSS يمكنك إضافته */
+        .icons {
+            display: flex;
+            /* لعرض البطاقات بجانب بعضها البعض */
+            gap: 15px;
+            /* مسافة بين البطاقات */
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            /* إضافة حد */
+            border-radius: 8px;
+            /* حواف مستديرة */
+            padding: 15px;
+            /* مساحة داخلية */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            /* إضافة ظل خفيف */
+            background-color: #f9f9f9;
+            /* لون خلفية للبطاقة */
+            text-align: center;
+        }
+
+        .card a {
+            display: block;
+        }
     </style>
 
 </head>
@@ -258,34 +297,42 @@ body::after {
     <section class="core-values">
         <h2>Core Values</h2>
         <div class="values-box">
-<div class="values">
-  <p>
-    <img src="imeges/light_mode.png" alt="Innovation icon" class="icon">
-    Innovation
-  </p>
-  <p>
-    <img src="imeges/front_hand.png" alt="Collaboration icon" class="icon">
-    Collaboration
-  </p>
-  <p>
-    <img src="imeges/Book.png" alt="Knowledge Sharing icon" class="icon">
-    Knowledge Sharing
-  </p>
-  <p>
-    <img src="imeges/Globe.png" alt="Inclusivity icon" class="icon">
-    Inclusivity
-  </p>
-</div>
+            <div class="values">
+                <p>
+                    <img src="imeges/light_mode.png" alt="Innovation icon" class="icon">
+                    Innovation
+                </p>
+                <p>
+                    <img src="imeges/front_hand.png" alt="Collaboration icon" class="icon">
+                    Collaboration
+                </p>
+                <p>
+                    <img src="imeges/Book.png" alt="Knowledge Sharing icon" class="icon">
+                    Knowledge Sharing
+                </p>
+                <p>
+                    <img src="imeges/Globe.png" alt="Inclusivity icon" class="icon">
+                    Inclusivity
+                </p>
+            </div>
         </div>
     </section>
 
+    <h2 class="use" style="background-image: linear-gradient(to right, #B0B5ED, #D9F8F4);">Connect Us</h2>
     <section class="connect">
-        <h2>Connect Us</h2>
         <div class="icons">
-            <a href="#"><img src="imeges/eimal.png" alt="Email"></a>
-            <a href="#"><img src="imeges/Rectangle 1689.png" alt="Instagram"></a>
-            <a href="#"><img src="imeges/Group 1564.png" alt="X"></a>
-            <a href="#"><img src="imeges/Phone call.png" alt="Phone"></a>
+            <div class="card" style="background-image: linear-gradient(to right, #FFA872, #F4CBCC);">
+                <a href="#"><img src="imeges/eimal.png" alt="Email"></a>
+            </div>
+            <div class="card" style="background-image: linear-gradient(to right, #FFEFD9, #FFDAF6);">
+                <a href="#"><img src="imeges/Rectangle 1689.png" alt="Instagram"></a>
+            </div>
+            <div class="card" style="background-image: linear-gradient(to right, #FFE5FC, #D5D2F6);">
+                <a href="#"><img src="imeges/Group 1564.png" alt="X"></a>
+            </div>
+            <div class="card" style="background-image: linear-gradient(to right, #DBFDE2, #E4F4FA);">
+                <a href="#"><img src="imeges/Phone call.png" alt="Phone"></a>
+            </div>
         </div>
     </section>
 
