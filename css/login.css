@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-weight: bold;
+  margin-right: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 2px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  background-color: #f7f3fb;
+  border: 1px solid #cfc7df;
+}
+
+nav ul li a.active {
+  background-color: #e9e3f5;
+}
+
+/* Cards */
+main {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fff;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card .btn {
+  display: inline-block;
+  padding: 6px 15px;
+  background-color: #eaf4ff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #c0d6f0;
+  font-size: 14px;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 8px 12px;
+  text-decoration: none;
+  background-color: #f2dce9;
+  color: black;
+  font-weight: bold;
+  margin: 0 2px;
+  border: 1px solid #cfc7df;
+}
+
+.pagination a.active {
+  background-color: #e9e3f5;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.connect-title {
+  display: inline-block;
+  background-color: #d6eaf8;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.icons a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.college-name {
+  color: #5a2496;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Right-side pattern */
+body::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background: url('pattern.png') no-repeat center/cover;
+  opacity: 0.9;
+  z-index: -1;
+  clip-path: polygon(100% 0, 80% 0, 0 100%, 100% 100%);
+}

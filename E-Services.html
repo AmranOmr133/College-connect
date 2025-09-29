@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Connect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* شريط التنقل العلوي */
+        nav {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        /* الأقسام الرئيسية */
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .smart-access {
+            background-color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .smart-access h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .smart-access p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            color: #555;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* أقسام المحتوى */
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .content-box {
+            flex-basis: 48%;
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .content-box h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .content-box p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        /* أزرار التنقل */
+        .pagination {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .pagination a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 0 5px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .pagination a.active {
+            background-color: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+        
+        /* قسم الاتصال */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        
+        footer h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        footer p {
+            font-size: 16px;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 30px 0;
+        }
+        
+        /* التجاوب مع الشاشات المختلفة */
+        @media (max-width: 768px) {
+            .content-box {
+                flex-basis: 100%;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل العلوي -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">&-Server</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section class="smart-access">
+        <h1>Smart Access</h1>
+        <p>The college's E-Server provides a secure platform for sharing lectures, assignments, and academic resources. Students can access materials anytime, making learning more flexible and organized.</p>
+        <a href="#" class="btn">Go to E-Server</a>
+    </section>
+
+    <!-- أقسام المحتوى -->
+    <section>
+        <div class="content-section">
+            <div class="content-box">
+                <h2>Knowledge Hub</h2>
+                <p>Our online library gives students instant access to books, journals, and research databases. With easy search tools and reservation options, studying becomes smarter and more efficient.</p>
+                <a href="#" class="btn">Visit Library</a>
+            </div>
+            
+            <div class="content-box">
+                <h2>Campus Journey</h2>
+                <p>College life is full of activities, from clubs and events to volunteering opportunities. It's about making connections, building skills, and creating memories beyond the classroom.</p>
+                <a href="#" class="btn">Explore Student Life</a>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="content-box">
+                <h2>Future Events</h2>
+                <p>Stay updated with the latest workshops and campus events. These activities help students gain new skills, meet professionals, and expand their academic and social networks.</p>
+                <a href="#" class="btn">See All Events</a>
+            </div>
+            
+            <div class="content-box">
+                <h2>Successful Success Guide</h2>
+                <p>Time management, effective note-taking, and healthy study habits can make a huge difference. Discover practical tips to boost your productivity and succeed in your studies.</p>
+                <a href="#" class="btn">Read Study Tips</a>
+            </div>
+        </div>
+        
+        <!-- أزرار التنقل بين الصفحات -->
+        <div class="pagination">
+            <a href="#">Previous</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">next</a>
+        </div>
+        
+        <hr>
+        
+        <!-- قسم الاتصال -->
+        <footer>
+            <h3>Connect Us</h3>
+            <p>International Technical College (Girls Campus)</p>
+        </footer>
+    </section>
+</body>
+</html>
