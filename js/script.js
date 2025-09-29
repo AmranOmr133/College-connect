@@ -1,6 +1,6 @@
-// ===== SMOOTH SCROLLING =====
+// ===== التمرير السلس =====
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scroll for all anchor links
+    // التمرير السلس لجميع روابط الـ anchor
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== HEADER SCROLL EFFECT =====
+    // ===== تأثير الرأس عند التمرير =====
     const header = document.querySelector('header');
     let lastScrollY = window.scrollY;
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.boxShadow = 'none';
         }
 
-        // Hide header on scroll down, show on scroll up
+        // إخفاء الرأس عند التمرير للأسفل، إظهاره عند التمرير للأعلى
         if (window.scrollY > lastScrollY && window.scrollY > 200) {
             header.style.transform = 'translateY(-100%)';
         } else {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollY = window.scrollY;
     });
 
-    // ===== TYPING EFFECT FOR WELCOME SECTION =====
+    // ===== تأثير الكتابة لقسم الترحيب =====
     const welcomeText = document.querySelector('.welcome p');
     if (welcomeText) {
         const originalText = welcomeText.textContent;
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Start typing effect when element is in viewport
+        // بدء تأثير الكتابة عندما يكون العنصر في منطقة الرؤية
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -66,16 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(welcomeText);
     }
 
-    // ===== PARALLAX EFFECT FOR BACKGROUND SHAPES =====
+    // ===== تأثير الخلفية المتحركة =====
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
-        const parallaxElements = document.querySelectorAll('body::after');
         
-        // Parallax effect for background shapes
+        // تأثير الحركة للخلفية
         document.body.style.backgroundPosition = `right ${scrolled * 0.5}px`;
     });
 
-    // ===== ANIMATE ON SCROLL =====
+    // ===== التحريك عند التمرير =====
     const animateOnScroll = () => {
         const elements = document.querySelectorAll('.about-content, .values-box, .card');
         
@@ -90,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
-    // Set initial state for animated elements
+    // تعيين الحالة الأولية للعناصر المتحركة
     document.querySelectorAll('.about-content, .values-box, .card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -98,9 +97,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Run once on load
+    animateOnScroll(); // التشغيل مرة واحدة عند التحميل
 
-    // ===== INTERACTIVE CARDS ENHANCEMENT =====
+    // ===== تحسين البطاقات التفاعلية =====
     document.querySelectorAll('.card').forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px) scale(1.05)';
@@ -112,9 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.1)';
         });
 
-        // Add click animation
+        // إضافة تأثير النقر
         card.addEventListener('click', function(e) {
-            if (e.target.tagName === 'A') return; // Don't animate if clicking link
+            if (e.target.tagName === 'A') return; // لا تضيف تأثير إذا كان النقر على رابط
             
             this.style.transform = 'scale(0.95)';
             setTimeout(() => {
@@ -123,10 +122,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== BUTTON ANIMATIONS =====
+    // ===== تأثيرات الأزرار =====
     document.querySelectorAll('button').forEach(button => {
         button.addEventListener('click', function(e) {
-            // Ripple effect
+            // تأثير التموج
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
@@ -146,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== LOADING ANIMATION =====
+    // ===== تأثير التحميل =====
     window.addEventListener('load', function() {
         document.body.style.opacity = '0';
         document.body.style.transition = 'opacity 0.5s ease';
@@ -156,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     });
 
-    // ===== ACTIVE NAV LINK HIGHLIGHTING =====
+    // ===== إبراز رابط التنقل النشط =====
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
 
@@ -182,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', highlightNavLink);
 
-    // ===== COUNTER ANIMATION FOR STATS (يمكن إضافتها لاحقاً) =====
+    // ===== عداد الرسوم المتحركة للإحصائيات (يمكن إضافتها لاحقاً) =====
     function animateCounter(element, target, duration) {
         let start = 0;
         const increment = target / (duration / 16);
@@ -197,26 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 16);
     }
 
-    // ===== CURSOR EFFECT =====
-    const cursor = document.createElement('div');
-    cursor.classList.add('custom-cursor');
-    document.body.appendChild(cursor);
-
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-
-    document.querySelectorAll('a, button, .card').forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            cursor.classList.add('cursor-hover');
-        });
-        element.addEventListener('mouseleave', () => {
-            cursor.classList.remove('cursor-hover');
-        });
-    });
-
-    // ===== SCROLL TO TOP BUTTON =====
+    // ===== زر العودة إلى الأعلى =====
     const scrollToTopBtn = document.createElement('button');
     scrollToTopBtn.innerHTML = '↑';
     scrollToTopBtn.classList.add('scroll-to-top');
@@ -240,26 +220,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ===== ADD CSS FOR CUSTOM CURSOR AND SCROLL BUTTON =====
+// ===== إضافة CSS لزر العودة إلى الأعلى =====
 const style = document.createElement('style');
 style.textContent = `
-    .custom-cursor {
-        width: 20px;
-        height: 20px;
-        border: 2px solid #8a2be2;
-        border-radius: 50%;
-        position: fixed;
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.2s ease;
-        mix-blend-mode: difference;
-    }
-    
-    .cursor-hover {
-        transform: scale(1.5);
-        background-color: #8a2be2;
-    }
-    
     .scroll-to-top {
         position: fixed;
         bottom: 30px;
@@ -305,7 +268,7 @@ style.textContent = `
         border-color: #525252FF;
     }
     
-    /* Improve existing card hover effects */
+    /* تحسين تأثيرات البطاقات الحالية */
     .card {
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
@@ -313,20 +276,20 @@ style.textContent = `
 
 document.head.appendChild(style);
 
-// ===== PRELOADER (اختياري) =====
+// ===== شاشة التحميل (اختياري) =====
 window.addEventListener('beforeunload', function() {
     document.body.classList.add('page-transition');
 });
 
-// ===== KEYBOARD SHORTCUTS =====
+// ===== اختصارات لوحة المفاتيح =====
 document.addEventListener('keydown', function(e) {
-    // Ctrl + H to go home
+    // Ctrl + H للذهاب إلى الصفحة الرئيسية
     if (e.ctrlKey && e.key === 'h') {
         e.preventDefault();
         window.location.href = '#';
     }
     
-    // Escape key to scroll to top
+    // مفتاح Escape للعودة إلى الأعلى
     if (e.key === 'Escape') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
