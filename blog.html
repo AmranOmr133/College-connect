@@ -3,18 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
   <title>College Connect</title>
   <style>
-
-
-
-
-
-
     .cards-container{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -73,10 +67,17 @@
       color:#000;
       font-weight:bold;
     }
-
-
-
     
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Highlight effect for targeted cards */
+    .card1:target {
+      box-shadow: 0 0 0 3px #4a90e2;
+      transition: box-shadow 0.3s ease;
+    }
   </style>
 </head>
 <body>
@@ -89,19 +90,21 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="blog.html">E-Services</a></li>
-                <li><a href="blog.html">Library</a></li>
+                <!-- تحديث الروابط لإضافة المعرفات -->
+                <li><a href="#e-services">E-Services</a></li>
+                <li><a href="#library">Library</a></li>
                 <li><a href="login.html">SIGN IN</a></li>
             </ul>
         </nav>
     </header>
 
   <div class="cards-container">
-    <div class="card1">
+    <!-- إضافة معرف للبطاقة الأولى -->
+    <div class="card1" id="e-services">
       <img src="imeges/Image1.png" alt="">
       <div class="card-content">
         <h3>Smart Access</h3>
-        <p>The college’s E-Server provides a secure platform for sharing lectures, assignments, and academic resources. Students can access materials anytime, making learning more flexible and organized.</p>
+        <p>The college's E-Server provides a secure platform for sharing lectures, assignments, and academic resources. Students can access materials anytime, making learning more flexible and organized.</p>
         <a href="#">Go to E-Server</a>
       </div>
     </div>
@@ -115,7 +118,8 @@
       </div>
     </div>
 
-    <div class="card1">
+    <!-- إضافة معرف للبطاقة الثالثة -->
+    <div class="card1" id="library">
       <img src="imeges/Image3.png" alt="">
       <div class="card-content">
         <h3>Knowledge Hub</h3>
@@ -128,7 +132,7 @@
       <img src="imeges/Image4.png" alt="">
       <div class="card-content">
         <h3>Campus Journey</h3>
-        <p>College life is full of activities, from clubs and events to volunteering opportunities. It’s about making connections, building skills, and creating memories beyond the classroom.</p>
+        <p>College life is full of activities, from clubs and events to volunteering opportunities. It's about making connections, building skills, and creating memories beyond the classroom.</p>
         <a href="#">Explore Student Life</a>
       </div>
     </div>
@@ -144,13 +148,11 @@
   </div>
 
   <div class="pagination">
-    <a href="#">previous</a>
+    <a href="index.html">previous</a>
     <a href="#">1</a>
     <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">NEXT</a>
+    <a href="login.html">NEXT</a>
   </div>
-
 
     <!-- Connect Us Section -->
     <h2 class="use">Connect Us</h2>
