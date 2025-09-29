@@ -84,54 +84,60 @@ nav ul li a {
     font-size: 1.2rem;
 }
 
-/* ===== ABOUT SECTION ===== */
-.about h2 {
-    background: #f3def6;
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 15px;
-    margin-left: 40px;
-    margin-top: 30px;
-    font-weight: bold;
-}
+       
 
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 40px;
-    flex-wrap: wrap;
-}
+        .about h2 {
+            background: #f3def6;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
 
-.about-content img {
-    width: 250px;
-    border-radius: 10px;
-}
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-.about-content .text {
-    flex: 1;
-}
+        .about-content img {
+            width: 250px;
+            border-radius: 10px;
+        }
 
-.about-content .text p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
+        .about-content .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
 
-.about-content button {
-    background: #f3def6;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
+        .about-content .text p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
 
-.about-content button:hover {
-    background: #e5c9e8;
-    transform: translateY(-2px);
-}
+        .about-content button {
+            background: #f3def6;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .about-content button:hover {
+            background: #e5c9e8;
+            transform: translateY(-2px);
+        }
 
 /* ===== CORE VALUES SECTION ===== */
 .core-values h2 {
