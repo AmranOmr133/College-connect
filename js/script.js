@@ -49,8 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // التشغيل مرة واحدة عند التحميل
+// التشغيل مرة واحدة عند التحميل
 
     // ===== تحسين البطاقات التفاعلية =====
     document.querySelectorAll('.card').forEach(card => {
